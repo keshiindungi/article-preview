@@ -64,6 +64,10 @@
 
     .card-content {
       padding: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card-footer {
@@ -119,6 +123,42 @@
     .share-popup.active {
       display: flex;
     }
+
+    h1 {
+      margin: 0;
+
+      font-size: 22px;
+      line-height: 30px;
+
+      color: hsl(217, 19%, 35%);
+    }
+
+    .card-content p {
+      color: hsl(214, 17%, 51%);
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .card-footer h4 {
+      margin: 0;
+      font-size: 13px;
+      color: hsl(217, 19%, 35%);
+    }
+
+    .card-footer p {
+      margin: 0;
+      color: hsl(214, 17%, 51%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 
@@ -129,10 +169,11 @@
     <article class="card">
       <img src="./images/drawers.jpg" alt="Drawers" class="card-image">
 
-      <div class="card-content" <h1>
-        Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home
-        </h1>
+      <div class="card-content">
+        <h3>
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h3>
 
         <p>
           Ever been in a room and felt like something was missing? Perhaps
