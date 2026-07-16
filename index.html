@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>| Article preview component</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #eef3fa;
+    }
+
+    .background {
+      width: 1100px;
+      height: 600px;
+
+      background: #f5f9ff;
+
+      border-radius: 8px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, .12);
+    }
+
+    .card {
+      width: 730px;
+      height: 280px;
+
+      display: flex;
+
+      position: relative;
+
+      background: white;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, .15);
+    }
+
+    .card-image {
+      width: 40%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 35px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .author-info {
+      margin-left: 15px;
+    }
+
+    .author-info h4,
+    .author-info p {
+      margin: 0;
+    }
+
+    .share-btn {
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: hsl(210, 46%, 95%);
+      cursor: pointer;
+    }
+
+    .share-btn img {
+      width: 16px;
+    }
+
+    .share-popup {
+      position: absolute;
+      right: 20px;
+      bottom: 70px;
+
+      display: none;
+
+      background: hsl(217, 19%, 35%);
+      color: white;
+
+      padding: 15px 20px;
+      border-radius: 10px;
+      gap: 15px;
+    }
+
+    .share-popup.active {
+      display: flex;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="background">
+
+    <article class="card">
+      <img src="./images/drawers.jpg" alt="Drawers" class="card-image">
+
+      <div class="card-content" <h1>
+        Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home
+        </h1>
+
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+
+        <div class="card-footer">
+          <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar">
+
+          <div class="author-info">
+            <h4>Michelle Appleton</h4>
+            <p>28 Jun 2020</p>
+          </div>
+
+          <button class="share-btn">
+            <img src="./images/icon-share.svg" alt="Share">
+          </button>
+        </div>
+
+        <div class=" share-popup">
+          <p>SHARE</p>
+
+          <img src="./images/icon-facebook.svg" alt="Facebook">
+
+          <img src="./images/icon-twitter.svg" alt="Twitter">
+
+          <img src="./images/icon-pinterest.svg" alt="Pinterest">
+        </div>
+
+      </div>
+
+    </article>
+  </div>
+  <script>
+    const shareBtn = document.querySelector(".share-btn");
+    const popup = document.querySelector(".share-popup");
+
+    shareBtn.addEventListener("click", function () {
+      popup.classList.toggle("active");
+    });
+
+  </script>
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Joan</a>.
+  </footer>
+
+</body>
+
+</html>
